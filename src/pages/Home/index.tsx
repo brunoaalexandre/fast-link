@@ -2,7 +2,7 @@ import { Container } from './styles';
 
 import { Header } from '../../components/Header';
 
-import logoImg from '../../assets/Logo.svg';
+import logoImg from '../../assets/logo.png';
 
 export function Home() {
   return (
@@ -10,7 +10,7 @@ export function Home() {
       <Header />
       <Container>
         <img src={logoImg} alt="Logo - Sujeito" />
-        <h1>SujeitoLink</h1>
+        <h1>Fast Link</h1>
         <h2>Cole seu link para encurtar 👇</h2>
 
         <form>

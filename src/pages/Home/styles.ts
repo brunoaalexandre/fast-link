@@ -16,7 +16,7 @@ export const Container = styled.div`
   h1 {
     width: 428px;
     font-size: 85px;
-    font-weight: 500;
+    font-weight: 600;
   }
   h2 {
     font-size: 22px;
