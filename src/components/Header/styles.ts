@@ -7,8 +7,9 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: right;
-  background-color: #fff;
-  color: #000;
+  background-color: transparent;
+  color: #fff;
+  position: absolute;
 
   padding-right: 50px;
   `;

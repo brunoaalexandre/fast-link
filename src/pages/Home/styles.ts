@@ -49,7 +49,7 @@ export const Container = styled.div`
 
   button {
     width: 100%;
-    height: 54;
+    height: 54px;
 
     margin-top: 15px;
     background: #fff;

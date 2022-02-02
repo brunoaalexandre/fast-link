@@ -7,8 +7,8 @@ import logoImg from '../../assets/logo.png';
 export function Home() {
   return (
     <>
-      <Header />
       <Container>
+      <Header />
         <img src={logoImg} alt="Logo - Sujeito" />
         <h1>Fast Link</h1>
         <h2>Cole seu link para encurtar 👇</h2>
