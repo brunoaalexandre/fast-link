@@ -12,4 +12,18 @@ export const Container = styled.header`
   position: absolute;
 
   padding-right: 50px;
+
+  p {
+    margin-right: 5px;
+  }
+
+  button {
+    background: #00d457;
+    margin-top: 1px;
+    margin-left: 14px;
+    height: 35px;
+    font-size: 19px;
+    color: var(--background);
+    padding: 5px 15px;
+  }
   `;
