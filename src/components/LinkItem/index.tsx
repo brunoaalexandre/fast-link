@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 import { ButtonLink, Container } from "./styles";
 
-interface CloseModalProps {
+interface ModalProps {
   onRequestClose: () => void;
+  link: string;
 }
 
-export function LinkItem({ onRequestClose }: CloseModalProps) {
+export function LinkItem({ onRequestClose, link }: ModalProps) {
   return(
     <Container>
       <header>
@@ -18,7 +19,7 @@ export function LinkItem({ onRequestClose }: CloseModalProps) {
       </header>
 
       <span>
-        https://github.com/brunoaalexandre
+        {link}
       </span>
 
       <ButtonLink>

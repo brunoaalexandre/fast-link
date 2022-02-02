@@ -40,6 +40,7 @@ export function Home() {
       {showModal && (
         <LinkItem
           onRequestClose={handleShowModalOff}
+          link={link}
         />
       )}
     </Container>
