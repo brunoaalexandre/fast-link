@@ -47,4 +47,8 @@ export const ButtonLink = styled.button`
         filter: brightness(0.8);
       }
     }
+
+    &:active {
+      background: #00d457;
+    }
 `;

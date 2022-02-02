@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { AiOutlineClose, AiOutlineCopy } from 'react-icons/ai';
 import styled from 'styled-components';
 
@@ -6,9 +7,14 @@ import { ButtonLink, Container } from "./styles";
 interface ModalProps {
   onRequestClose: () => void;
   link: string;
+  content: string;
 }
 
-export function LinkItem({ onRequestClose, link }: ModalProps) {
+export function LinkItem({ onRequestClose, link, content }: ModalProps) {
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(content);
+  }
+
   return(
     <Container>
       <header>
@@ -22,8 +28,8 @@ export function LinkItem({ onRequestClose, link }: ModalProps) {
         {link}
       </span>
 
-      <ButtonLink>
-        https://bit.ly/1231412
+      <ButtonLink onClick={handleCopy}>
+        {content}
         <AiOutlineCopy size={20} color="#fff" />
       </ButtonLink>
     </Container>
