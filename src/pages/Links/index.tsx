@@ -10,8 +10,8 @@ import { getLinkSave } from '../../services/storeLinks';
 import { Container, Content } from './styles';
 
 export function Links() {
-  const [myLinks, setMyLinks] = useState([]);
-  const [data, setData] = useState({});
+  const [myLinks, setMyLinks] = useState([] as any[]);
+  const [data, setData] = useState({} as any);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {

@@ -12,7 +12,7 @@ import { saveLink } from '../../services/storeLinks';
 
 export function Home() {
   const [link, setLink] = useState('');
-  const [data, setData] = useState({});
+  const [data, setData] = useState({} as any);
   const [showModal, setShowModal] = useState(false)
 
   const handleShortLink = async () => {
