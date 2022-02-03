@@ -6,11 +6,13 @@ import { Header } from '../../components/Header';
 import logoImg from '../../assets/logo.png';
 import { Input } from '../../components/FieldText/styles';
 import { LinkItem } from '../../components/LinkItem';
+
 import { api } from '../../services/api';
+import { saveLink } from '../../services/storeLinks';
 
 export function Home() {
   const [link, setLink] = useState('');
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
   const [showModal, setShowModal] = useState(false)
 
   const handleShortLink = async () => {
@@ -22,6 +24,9 @@ export function Home() {
 
       setData(response.data);
       setShowModal(true)
+
+      saveLink('@fastLink', response.data);
+
       setLink('');
     } catch {
       alert("Coloque uma URL válida!");
