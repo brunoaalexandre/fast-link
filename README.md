@@ -9,7 +9,7 @@ My idea is to help as many people with this project done is this way, using the 
 So, that's all, folks! ❤️
 
 # Technologies
-#### The technologies 
+#### The technologies used
   - <a href="https://www.typescriptlang.org">TypeScript</a>
   - <a href="https://github.com/styled-components/styled-components">Styled-Components</a>
   - <a href="https://github.com/vitejs/vite">ViteJS</a>
@@ -23,7 +23,7 @@ So, that's all, folks! ❤️
   git clone https://github.com/brunoaalexandre/fast-link.git
 ```
 
-### Instal all the dependencies
+### Install all dependencies
 #### Yarn
 ```html
   yarn
