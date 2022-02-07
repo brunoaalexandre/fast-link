@@ -1,3 +1,5 @@
+<p align="center" dir="auto"><img src="https://i.imgur.com/N5vCgf4.gif" /></p>
+
 # About this project
 
 This project is being developed during the Sujeito Programador's classes. The real project called Sujeito Link, and mine called Fast Link. <br /><br />
