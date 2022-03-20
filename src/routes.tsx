@@ -8,7 +8,7 @@ export default function RoutesApp() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/links" element={<Links />} />
         <Route path="*" element={<Error />} />
       </Routes>
