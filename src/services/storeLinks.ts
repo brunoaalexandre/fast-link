@@ -1,23 +1,36 @@
+interface GetLinkSaveData {
+  key: any;
+}
 
+interface SaveLinkData {
+  key: any;
+  newLink: {
+    id: string;
+  }
+}
 
-export const getLinkSave = async (key: string) => {
+interface LinkData {
+  link: {
+    id: string;
+  }
+}
+
+export async function getLinkSave({ key }: GetLinkSaveData) {
   const myLinks = await localStorage.getItem(key) as string;
-
   let linksSaves = JSON.parse(myLinks) || [];
 
   return linksSaves;
 }
 
-export const saveLink = async (key: string, newLink: string) => {
+export async function saveLink({ key, newLink }: SaveLinkData) {
   let linksStored = await getLinkSave(key);
 
-  const hasLink = linksStored.some( (link: string) => link.id === newLink.id )
+  const hasLink = linksStored.some(({ link }: LinkData) => link.id === newLink.id)
   if(hasLink) {
-    alert('Esse link já existe na sua lista!')
+    alert('Esse link já existe na sua lista!');
     return;
   }
 
   linksStored.push(newLink);
   await localStorage.setItem(key, JSON.stringify(linksStored));
-  alert('Link salvo com sucesso');
 }
