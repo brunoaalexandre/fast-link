@@ -1,9 +1,4 @@
-interface GetLinkSaveData {
-  key: any;
-}
-
 interface SaveLinkData {
-  key: any;
   newLink: {
     id: string;
   }
@@ -15,14 +10,14 @@ interface LinkData {
   }
 }
 
-export async function getLinkSave({ key }: GetLinkSaveData) {
+export async function getLinkSave(key:string) {
   const myLinks = await localStorage.getItem(key) as string;
   let linksSaves = JSON.parse(myLinks) || [];
 
   return linksSaves;
 }
 
-export async function saveLink({ key, newLink }: SaveLinkData) {
+export async function saveLink(key: string, { newLink }: SaveLinkData) {
   let linksStored = await getLinkSave(key);
 
   const hasLink = linksStored.some(({ link }: LinkData) => link.id === newLink.id)

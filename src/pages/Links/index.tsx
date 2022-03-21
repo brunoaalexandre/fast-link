@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
-
 import { AiOutlineArrowLeft, AiOutlineDelete, AiOutlineLink } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-
 import { LinkItem } from '../../components/LinkItem'
-
 import { getLinkSave } from '../../services/storeLinks';
 
 import { Container, Content } from './styles';
